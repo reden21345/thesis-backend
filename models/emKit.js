@@ -42,12 +42,6 @@ const emKitSchema = new mongoose.Schema({
             message: 'Please select correct category for Emergency item'
         }
     },
-    stock: {
-        type: Number,
-        required: [true, 'Please enter coffee stock'],
-        maxLength: [5, 'Coffee name cannot exceed 5 characters'],
-        default: 0
-    },
     // user: {
     //     type: mongoose.Schema.ObjectId,
     //     ref: 'User',
