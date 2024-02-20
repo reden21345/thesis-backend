@@ -1,4 +1,5 @@
 const EmKit = require('../models/emKit');
+const ErrorHandler = require('../utils/errorHandler');
 
 //Create New Emergency Item
 exports.newEmkit = async (req, res, next) => {
@@ -30,10 +31,7 @@ exports.getSingleEmKit = async (req, res, next) => {
     const emkit = await EmKit.findById(req.params.id);
 
     if (!emkit) {
-        return res.status(404).json({
-            success: false,
-            message: "Emergency Item not found"
-        })
+        return next(new ErrorHandler('Emergency Item not Found', 400));
     }
 
     res.status(200).json({
