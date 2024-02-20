@@ -41,3 +41,27 @@ exports.getSingleEmKit = async (req, res, next) => {
         emkit
     })
 }
+
+//Update emKit Details
+exports.updateEmKit = async (req, res, next) => {
+
+    let emkit = await EmKit.findById(req.params.id);
+
+    if (!emkit) {
+        return res.status(404).json({
+            success: false,
+            message: "Em Item not found"
+        })
+    };
+
+    emkit = await EmKit.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+        runValidators: true,
+        useFindAndModify: false
+    });
+
+    res.status(200).json({
+        success: true,
+        emkit
+    })
+}
