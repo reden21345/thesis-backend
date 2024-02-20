@@ -6,8 +6,7 @@
         "images": {
                 "public_id": "coffees/7dfg98h32lgw8sdl93j",
                 "url": "https://res.cloudinary.com/coffee-time/image/upload/v1608062030/coffees/7dfg98h32lgw8sdl93j.jpg"
-        },
-        "category": "Fire"
+        }
     },
     {
         "name": "Whistle",
@@ -16,8 +15,7 @@
         "images": {
             "public_id": "coffees/7dfg98h32lgw8sdl93j",
             "url": "https://res.cloudinary.com/coffee-time/image/upload/v1608062030/coffees/7dfg98h32lgw8sdl93j.jpg"
-        },
-        "category": "Earthquake"
+        }
     },
     {
         "name": "Canned Goods",
@@ -26,7 +24,6 @@
         "images": {
             "public_id": "coffees/7dfg98h32lgw8sdl93j",
             "url": "https://res.cloudinary.com/coffee-time/image/upload/v1608062030/coffees/7dfg98h32lgw8sdl93j.jpg"
-        },
-        "category": "Typhoon"
+        }
     }
 ]

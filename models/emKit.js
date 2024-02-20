@@ -27,19 +27,6 @@ const emKitSchema = new mongoose.Schema({
                 required: true
             },
     },
-    category: {
-        type: String,
-        required: [true, 'Please select category for this Emergency item'],
-        enum: {
-            values: [
-                'Fire',
-                'Earthquake',
-                'Typhoon',
-                'Flood'
-            ],
-            message: 'Please select correct category for Emergency item'
-        }
-    },
     // user: {
     //     type: mongoose.Schema.ObjectId,
     //     ref: 'User',
