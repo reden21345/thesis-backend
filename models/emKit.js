@@ -17,8 +17,7 @@ const emKitSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please enter Emergency Item description'],
     },
-    images: [
-        {
+    images: {
             public_id: {
                 type: String,
                 required: true
@@ -27,8 +26,7 @@ const emKitSchema = new mongoose.Schema({
                 type: String,
                 required: true
             },
-        }
-    ],
+    },
     category: {
         type: String,
         required: [true, 'Please select category for this Emergency item'],
