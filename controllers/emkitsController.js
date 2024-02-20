@@ -1,8 +1,10 @@
 const EmKit = require('../models/emKit');
+
 const ErrorHandler = require('../utils/errorHandler');
+const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
 
 //Create New Emergency Item
-exports.newEmkit = async (req, res, next) => {
+exports.newEmkit = catchAsyncErrors (async (req, res, next) => {
 
     const emKit = await EmKit.create(req.body);
 
@@ -11,10 +13,10 @@ exports.newEmkit = async (req, res, next) => {
         emKit
     })
     
-}
+})
 
 // Get All Emergency Items
-exports.getEmkits = async (req, res, next) => {
+exports.getEmkits = catchAsyncErrors (async (req, res, next) => {
 
     const emkits = await EmKit.find();
 
@@ -23,10 +25,10 @@ exports.getEmkits = async (req, res, next) => {
         count: emkits.length,
         emkits
     })
-}
+})
 
 //Get single Emergency Item detail
-exports.getSingleEmKit = async (req, res, next) => {
+exports.getSingleEmKit = catchAsyncErrors (async (req, res, next) => {
 
     const emkit = await EmKit.findById(req.params.id);
 
@@ -38,18 +40,15 @@ exports.getSingleEmKit = async (req, res, next) => {
         success: true,
         emkit
     })
-}
+})
 
 //Update emKit Details
-exports.updateEmKit = async (req, res, next) => {
+exports.updateEmKit = catchAsyncErrors (async (req, res, next) => {
 
     let emkit = await EmKit.findById(req.params.id);
 
     if (!emkit) {
-        return res.status(404).json({
-            success: false,
-            message: "Em Item not found"
-        })
+        return next(new ErrorHandler('Emergency Item not Found', 400));
     };
 
     emkit = await EmKit.findByIdAndUpdate(req.params.id, req.body, {
@@ -62,22 +61,19 @@ exports.updateEmKit = async (req, res, next) => {
         success: true,
         emkit
     })
-}
+})
 
 //Delete EmKit
-exports.deleteEmkit = async (req, res, next) => {
+exports.deleteEmkit = catchAsyncErrors (async (req, res, next) => {
 
     const emkit = await EmKit.findByIdAndDelete(req.params.id);
 
     if (!emkit) {
-        return res.status(404).json({
-            success: false,
-            message: "Emergency Item not found"
-        })
+        return next(new ErrorHandler('Emergency Item not Found', 400));
     };
 
     res.status(200).json({
         success: true,
         message: "Emergency Item is deleted."
     })
-}
+})
