@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Flood Preparedness Curriculum",
+        "description": "A KN95 mask is a type of respirator face mask designed to achieve a close facial fit and efficient filtration of airborne particles. It is similar in function to the N95 respirator mask widely used in healthcare settings. The KN in KN95 stands for Chinese standard, indicating that it meets the standards set by China's National Health Commission for filtering out at least 95% of airborne particles. KN95 masks are commonly used for protection against particulate matter such as dust, smoke, and various airborne pollutants. They have become particularly popular during health crises such as the COVID-19 pandemic as a tool for reducing the transmission of respiratory viruses.",
+        "category": "Flood"
+    },
+    {
+        "name": "Fire Management Curriculum",
+        "description": "A KN95 mask is a type of respirator face mask designed to achieve a close facial fit and efficient filtration of airborne particles. It is similar in function to the N95 respirator mask widely used in healthcare settings. The KN in KN95 stands for Chinese standard, indicating that it meets the standards set by China's National Health Commission for filtering out at least 95% of airborne particles. KN95 masks are commonly used for protection against particulate matter such as dust, smoke, and various airborne pollutants. They have become particularly popular during health crises such as the COVID-19 pandemic as a tool for reducing the transmission of respiratory viruses.",
+        "category": "Fire"
+    },
+    {
+        "name": "Earthquake Alert Curriculum",
+        "description": "A KN95 mask is a type of respirator face mask designed to achieve a close facial fit and efficient filtration of airborne particles. It is similar in function to the N95 respirator mask widely used in healthcare settings. The KN in KN95 stands for Chinese standard, indicating that it meets the standards set by China's National Health Commission for filtering out at least 95% of airborne particles. KN95 masks are commonly used for protection against particulate matter such as dust, smoke, and various airborne pollutants. They have become particularly popular during health crises such as the COVID-19 pandemic as a tool for reducing the transmission of respiratory viruses.",
+        "category": "Earthquake"
+    }
+]

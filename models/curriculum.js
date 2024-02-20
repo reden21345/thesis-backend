@@ -11,16 +11,6 @@ const curriculumSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please enter Curriculum description'],
     },
-    images: {
-            public_id: {
-                type: String,
-                required: true
-            },
-            url: {
-                type: String,
-                required: true
-            },
-    },
     category: {
         type: String,
         required: [true, 'Please select category for this Curriculum'],
