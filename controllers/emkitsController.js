@@ -65,3 +65,21 @@ exports.updateEmKit = async (req, res, next) => {
         emkit
     })
 }
+
+//Delete EmKit
+exports.deleteEmkit = async (req, res, next) => {
+
+    const emkit = await EmKit.findByIdAndDelete(req.params.id);
+
+    if (!emkit) {
+        return res.status(404).json({
+            success: false,
+            message: "Emergency Item not found"
+        })
+    };
+
+    res.status(200).json({
+        success: true,
+        message: "Emergency Item is deleted."
+    })
+}
