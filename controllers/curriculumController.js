@@ -14,3 +14,15 @@ exports.newCurriculum = catchAsyncErrors (async (req, res, next) => {
     })
     
 })
+
+// Get All Curriculum
+exports.getCurriculum = catchAsyncErrors (async (req, res, next) => {
+
+    const curriculum = await Curriculum.find();
+
+    res.status(200).json({
+        success: true,
+        count: curriculum.length,
+        curriculum
+    })
+})

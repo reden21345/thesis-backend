@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 
-const { newCurriculum } = require('../controllers/curriculumController')
+const { newCurriculum, getCurriculum } = require('../controllers/curriculumController')
 
 
-// router.route('/emkits').get(getEmkits)
+router.route('/curriculums').get(getCurriculum)
 // router.route('/emkit/:id').get(getSingleEmKit)
 
 router.route('/curriculum/new').post(newCurriculum)
